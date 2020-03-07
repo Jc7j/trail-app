@@ -1,9 +1,9 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { AppParamList } from './AppParamList';
-import { AntDesign, Ionicons, EvilIcons } from '@expo/vector-icons';
+import { AntDesign, FontAwesome } from '@expo/vector-icons';
 import HomeScreen from '../screens/HomeScreen';
-import Test from '../components/test';
+import TrailScreen from '../screens/TrailScreen';
 
 const Tabs = createBottomTabNavigator<AppParamList>();
 
@@ -17,9 +17,9 @@ const AppTabs = () => {
             iconName = 'home';
             return <AntDesign name={'home'} size={size} color={color} />;
           }
-          if (route.name == 'Test') {
-            iconName = 'test';
-            return <EvilIcons name={'test'} size={size} color={color} />;
+          if (route.name == 'Trail') {
+            iconName = 'tree';
+            return <FontAwesome name={'tree'} size={size} color={color} />;
           }
         }
       })}
@@ -33,7 +33,7 @@ const AppTabs = () => {
       }}
     >
       <Tabs.Screen name="Home" component={HomeScreen} />
-      <Tabs.Screen name="Test" component={Test} />
+      <Tabs.Screen name="Trail" component={TrailScreen} />
     </Tabs.Navigator>
   );
 };

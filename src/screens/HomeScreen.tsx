@@ -4,7 +4,7 @@ import { ScrollView, Text, StyleSheet } from 'react-native';
 const HomeScreen = () => {
   return (
     <ScrollView style={styles.homeScreenContiner}>
-      <Text>Helo world</Text>
+      <Text style={styles.welcomeText}>Welcome</Text>
     </ScrollView>
   );
 };
@@ -13,6 +13,10 @@ const styles = StyleSheet.create({
   homeScreenContiner: {
     backgroundColor: 'white',
     paddingLeft: 10
+  },
+  welcomeText: {
+    // fontFamily: 'Roboto-Regular',
+    fontSize: 50
   }
 });
 
