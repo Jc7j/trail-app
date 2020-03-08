@@ -17,7 +17,7 @@ const AppTabs = () => {
             iconName = 'home';
             return <AntDesign name={'home'} size={size} color={color} />;
           }
-          if (route.name == 'Trail') {
+          if (route.name == 'Trails') {
             iconName = 'tree';
             return <FontAwesome name={'tree'} size={size} color={color} />;
           }
@@ -33,7 +33,7 @@ const AppTabs = () => {
       }}
     >
       <Tabs.Screen name="Home" component={HomeScreen} />
-      <Tabs.Screen name="Trail" component={TrailScreen} />
+      <Tabs.Screen name="Trails" component={TrailScreen} />
     </Tabs.Navigator>
   );
 };
